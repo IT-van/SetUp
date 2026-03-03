@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SetUp</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- Swiper.js for slider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.css" />
+  <!-- Google Fonts -->
+   <link rel="icon" type="image/png" href="SetUp.png.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========================
+       HEADER / NAVIGAATIO
+  ========================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="logo">
+        <img class="logo__icon" src="SetUp.png.png" alt="SetUp">
+        <span class="logo__text">Set<strong>Up</strong></span>
+      </a>
+
+      <!-- Työpöydän navigaatio -->
+      <nav class="nav" aria-label="Päävalikko">
+        <ul class="nav__list">
+          <li><a href="#about"        class="nav__link">Minusta</a></li>
+          <li><a href="#services"     class="nav__link">Palvelut</a></li>
+          <li><a href="#projects"     class="nav__link">Projektit</a></li>
+          <li><a href="#why-us"       class="nav__link">Miksi minä</a></li>
+          <li><a href="#testimonials" class="nav__link">Arvostelut</a></li>
+          <li><a href="#contact"      class="nav__link">Ota yhteyttä</a></li>
+        </ul>
+      </nav>
+
+      <!-- Toimintakehotuspainike (työpöytä) -->
+      <a href="#contact" class="btn btn--primary nav__cta">Pyydä tarjous</a>
+
+      <!-- Burstivalikko-painike (mobiili) -->
+      <button class="burger" id="burger" aria-label="Avaa valikko" aria-expanded="false">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobiilivalikon laatikko -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav aria-label="Mobiilivalikko">
+        <ul class="mobile-menu__list">
+          <li><a href="#about"        class="mobile-menu__link">Minusta</a></li>
+          <li><a href="#services"     class="mobile-menu__link">Palvelut</a></li>
+          <li><a href="#projects"     class="mobile-menu__link">Projektit</a></li>
+          <li><a href="#why-us"       class="mobile-menu__link">Miksi minä</a></li>
+          <li><a href="#testimonials" class="mobile-menu__link">Arvostelut</a></li>
+          <li><a href="#contact"      class="mobile-menu__link">Ota yhteyttä</a></li>
+        </ul>
+        <a href="#contact" class="btn btn--primary mobile-menu__cta">Pyydä tarjous</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========================
+         HERO-OSIO
+    ========================= -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__overlay"></div>
+        <div class="hero__grid-pattern"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__eyebrow" data-aos="fade-up" data-aos-delay="100">Lisensoitu &amp; vakuutettu rakentaja · Perustettu 2008</p>
+        <h1 class="hero__headline" data-aos="fade-up" data-aos-delay="200">
+          Rakennettu oikein.<br/>
+          <span class="text--accent">Rakennettu kestämään.</span>
+        </h1>
+        <p class="hero__sub" data-aos="fade-up" data-aos-delay="300">
+          Perustuksista viimeistelyyn — tuon vuosikymmenten käytännön kokemuksen ja tinkimättömän ammattitaidon jokaiseen projektiin.
+        </p>
+        <div class="hero__actions" data-aos="fade-up" data-aos-delay="400">
+          <a href="#contact"  class="btn btn--primary btn--lg">Pyydä ilmainen tarjous</a>
+          <a href="#projects" class="btn btn--outline btn--lg">Katso töitäni</a>
+        </div>
+
+        <!-- Tilastorivi -->
+        <div class="hero__stats" data-aos="fade-up" data-aos-delay="500">
+          <div class="hero__stat">
+            <span class="hero__stat-number">15<span class="text--accent">+</span></span>
+            <span class="hero__stat-label">Vuotta kokemusta</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">200<span class="text--accent">+</span></span>
+            <span class="hero__stat-label">Projektia valmiina</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">100<span class="text--accent">%</span></span>
+            <span class="hero__stat-label">Asiakastyytyväisyys</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vieritysilmaisin -->
+      <a href="#about" class="hero__scroll" aria-label="Vieritä alas">
+        <span class="hero__scroll-dot"></span>
+      </a>
+    </section>
+
+    <!-- ========================
+         TIETOA MINUSTA -OSIO
+    ========================= -->
+    <section class="about section" id="about">
+      <div class="container about__inner">
+
+        <!-- Kuvapaikkamerkki -->
+        <div class="about__image-wrap" data-aos="fade-right">
+          <div class="about__image-placeholder">
+            <div class="about__image-label">
+              <span>&#128247;</span>
+              <p>Omistajan kuva</p>
+            </div>
+          </div>
+          <div class="about__badge">
+            <span class="about__badge-num">15+</span>
+            <span class="about__badge-text">Vuotta<br>huippuosaamista</span>
+          </div>
+        </div>
+
+        <!-- Tekstisisältö -->
+        <div class="about__content" data-aos="fade-left">
+          <p class="section__eyebrow">Minusta</p>
+          <h2 class="section__title">Rakentaja, joka <span class="text--accent">saapuu paikalle</span> ja toimittaa</h2>
+          <p class="about__body">
+            Olen <strong>[Nimesi]</strong>, lisensoitu ja täysin vakuutettu rakentaja <strong>[kaupunkisi]</strong> alueella. Yli 15 vuoden käytännön kokemuksella asuin- ja liikerakentamisesta olen rakentanut maineeni projekti kerrallaan — olemalla rehellinen, luotettava ja keskittymällä laatuun.
+          </p>
+          <p class="about__body">
+            Toisin kuin suurissa yrityksissä, joissa et koskaan tiedä kuka paikalle saapuu, kun palkkaat minut, saat <em>minut</em> — työmaalle, vastuullisena ja täysin sitoutuneena toteuttamaan visiosi. Jokainen naula, palkki ja viimeistelydetalji käsitellään samalla huolella kuin omassa kodissani.
+          </p>
+
+          <ul class="about__facts">
+            <li class="about__fact"><span class="about__fact-icon text--accent">&#10003;</span>Lisensoitu &amp; täysin vakuutettu</li>
+            <li class="about__fact"><span class="about__fact-icon text--accent">&#10003;</span>Ajoissa &amp; budjetissa pysyvä toimitus</li>
+            <li class="about__fact"><span class="about__fact-icon text--accent">&#10003;</span>Läpinäkyvä hinnoittelu — ei piilokuluja</li>
+            <li class="about__fact"><span class="about__fact-icon text--accent">&#10003;</span>Paikallinen asiantuntija · [Alueesi / Maakuntasi]</li>
+          </ul>
+
+          <a href="#contact" class="btn btn--primary">Työskentele kanssani</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================
+         PALVELUT-OSIO
+    ========================= -->
+    <section class="services section section--dark" id="services">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <p class="section__eyebrow">Mitä teen</p>
+          <h2 class="section__title">Palvelut &amp; <span class="text--accent">Erikoisosaaminen</span></h2>
+          <p class="section__desc">Täysin uudisrakennuksista huolellisiin remontteihin — tässä miten voin auttaa projektiesi toteutuksessa.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card__icon">&#127968;</div>
+            <h3 class="service-card__title">Uudiskotien rakennus</h3>
+            <p class="service-card__desc">Täyden palvelun rakennus räätälöidyille omakotitaloille — suunnittelusta ja perustuksista aina luovutukseen asti.</p>
+            <span class="service-card__arrow">&#8594;</span>
+          </article>
+
+          <article class="service-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="service-card__icon">&#128295;</div>
+            <h3 class="service-card__title">Laajennukset &amp; lisärakentaminen</h3>
+            <p class="service-card__desc">Laajenna nykyistä tilaasi saumattomasti toteutetuilla laajennuksilla, jotka sopivat kotisi luonteeseen ja tyyliin.</p>
+            <span class="service-card__arrow">&#8594;</span>
+          </article>
+
+          <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card__icon">&#128736;</div>
+            <h3 class="service-card__title">Remontit &amp; uudistukset</h3>
+            <p class="service-card__desc">Keittiöt, kylpyhuoneet, avoimemmat tilat — muutan väsyneet tilat moderneiksi, toimiviksi asuinalueiksi.</p>
+            <span class="service-card__arrow">&#8594;</span>
+          </article>
+
+          <article class="service-card" data-aos="fade-up" data-aos-delay="250">
+            <div class="service-card__icon">&#127981;</div>
+            <h3 class="service-card__title">Liiketilojen sisustus</h3>
+            <p class="service-card__desc">Toimisto, myymälä tai työtila — toteutan liiketilat, jotka ovat käytännöllisiä, määräysten mukaisia ja vaikuttavia.</p>
+            <span class="service-card__arrow">&#8594;</span>
+          </article>
+
+          <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card__icon">&#127959;</div>
+            <h3 class="service-card__title">Rakenteelliset korjaukset</h3>
+            <p class="service-card__desc">Asiantunteva vianmääritys ja korjaus rakenteellisiin ongelmiin — painumat, halkeamat, kosteusvauriot ja kantavien rakenteiden muutokset.</p>
+            <span class="service-card__arrow">&#8594;</span>
+          </article>
+
+          <article class="service-card" data-aos="fade-up" data-aos-delay="350">
+            <div class="service-card__icon">&#128200;</div>
+            <h3 class="service-card__title">Projektinhallinta</h3>
+            <p class="service-card__desc">Tarvitsetko valvontaa isompaan projektiin? Koordinoin työsuorituksia, aikatauluja ja budjetteja, jotta mikään ei unohdu.</p>
+            <span class="service-card__arrow">&#8594;</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================
+         PROJEKTIT / PORTFOLIO
+    ========================= -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <p class="section__eyebrow">Portfolio</p>
+          <h2 class="section__title">Viimeisimmät <span class="text--accent">projektit</span></h2>
+          <p class="section__desc">Valikoima valmistuneita töitä — selaa tai pyyhkäise tutkiaksesi.</p>
+        </div>
+      </div>
+
+      <div class="swiper projects__swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide project-card">
+            <div class="project-card__image">
+              <div class="project-card__img-placeholder"><span>&#128247;</span><p>Projektin kuva</p></div>
+              <div class="project-card__tag">Uudisrakennus</div>
+            </div>
+            <div class="project-card__info">
+              <h3 class="project-card__title">4 makuuhuoneen omakotitalo</h3>
+              <p class="project-card__location">&#128205; [Kaupunki, Alue]</p>
+              <p class="project-card__desc">Täysi uudisrakennus modernille 4 makuuhuoneen erillistalolle, jossa avokeittiö-ruokailutila ja viimeistelty puutarha.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide project-card">
+            <div class="project-card__image">
+              <div class="project-card__img-placeholder"><span>&#128247;</span><p>Projektin kuva</p></div>
+              <div class="project-card__tag">Laajennus</div>
+            </div>
+            <div class="project-card__info">
+              <h3 class="project-card__title">Takarungon keittiölaajennus</h3>
+              <p class="project-card__location">&#128205; [Kaupunki, Alue]</p>
+              <p class="project-card__desc">Yksikerroksinen kulmalaajennus, jossa taitto-ovet, kattoikkunat ja täysin uusittu keittiö — ahtaan rivitalon muutos valoisaksi perhetilaksi.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide project-card">
+            <div class="project-card__image">
+              <div class="project-card__img-placeholder"><span>&#128247;</span><p>Projektin kuva</p></div>
+              <div class="project-card__tag">Liiketila</div>
+            </div>
+            <div class="project-card__info">
+              <h3 class="project-card__title">Toimiston sisustus &amp; kunnostus</h3>
+              <p class="project-card__location">&#128205; [Kaupunki, Alue]</p>
+              <p class="project-card__desc">Täydellinen purku ja uudelleenrakennus 300 m² liiketilaan sisältäen väliseinät, alaslasketut katot, LVI- ja sähkötöiden koordinoinnin sekä pintamateriaalit.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide project-card">
+            <div class="project-card__image">
+              <div class="project-card__img-placeholder"><span>&#128247;</span><p>Projektin kuva</p></div>
+              <div class="project-card__tag">Remontti</div>
+            </div>
+            <div class="project-card__info">
+              <h3 class="project-card__title">Viktoriaanisen rivitalon remontti</h3>
+              <p class="project-card__location">&#128205; [Kaupunki, Alue]</p>
+              <p class="project-card__desc">Vanhan rakennuksen täysremontti — rakenteelliset muutokset, kosteuseristys, sähköjen ja putkien uusinta sekä sisätilojen täydellinen kunnostus alkuperäisiä ominaispiirteitä kunnioittaen.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide project-card">
+            <div class="project-card__image">
+              <div class="project-card__img-placeholder"><span>&#128247;</span><p>Projektin kuva</p></div>
+              <div class="project-card__tag">Ullakkoremontti</div>
+            </div>
+            <div class="project-card__info">
+              <h3 class="project-card__title">Ullakkohuoneiston muutos</h3>
+              <p class="project-card__location">&#128205; [Kaupunki, Alue]</p>
+              <p class="project-card__desc">Täydellinen ullakkoremontti, johon lisättiin makuuhuonesviitti kylpyhuoneella, Velux-ikkunat ja räätälöidyt säilytysratkaisut — toimitettiin ajallaan ja budjetissa.</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-button-next projects__btn-next"></div>
+        <div class="swiper-button-prev projects__btn-prev"></div>
+        <div class="swiper-pagination projects__pagination"></div>
+      </div>
+    </section>
+
+    <!-- ========================
+         MIKSI VALITA MINUT
+    ========================= -->
+    <section class="why-us section section--dark" id="why-us">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <p class="section__eyebrow">Miksi valita minut</p>
+          <h2 class="section__title"><span class="text--accent">SetUp</span>-ero</h2>
+        </div>
+
+        <div class="why-us__grid">
+          <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-card__num text--accent">01</div>
+            <h3 class="why-card__title">Asioit suoraan kanssani</h3>
+            <p class="why-card__desc">Ei asiakkuuspäälliköitä, ei välikäsiä. Olen työmaalla päivittäin ja henkilökohtaisesti vastuussa jokaisesta projektissa tehdystä päätöksestä.</p>
+          </div>
+          <div class="why-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="why-card__num text--accent">02</div>
+            <h3 class="why-card__title">Kiinteähintaiset tarjoukset</h3>
+            <p class="why-card__desc">Annan selkeät, eritellyt tarjoukset ilman piilokustannuksia. Tarjoukseni hinta on lopullinen hinta — ellet muuta työn laajuutta.</p>
+          </div>
+          <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="why-card__num text--accent">03</div>
+            <h3 class="why-card__title">Yli 15 vuoden kokemus</h3>
+            <p class="why-card__desc">Monimutkaisista rakennetöistä hienovaraisiin viimeistely-yksityiskohtiin — olen nähnyt kaiken ja tiedän miten käsitellä haasteet ennen kuin niistä tulee ongelmia.</p>
+          </div>
+          <div class="why-card" data-aos="fade-up" data-aos-delay="250">
+            <div class="why-card__num text--accent">04</div>
+            <h3 class="why-card__title">Luotettava ammattilaisten verkosto</h3>
+            <p class="why-card__desc">Työskentelen luotetun paikallisten sähköasentajien, putkiasentajien ja erikoisosaajien piirin kanssa — joiden osaaminen on todettu vuosien yhteistyön aikana.</p>
+          </div>
+          <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="why-card__num text--accent">05</div>
+            <h3 class="why-card__title">Siistit &amp; kunnioittavat työmaat</h3>
+            <p class="why-card__desc">Suhtaudun omaisuuteesi kunnioittavasti. Työmaat siivotaan päivittäin ja materiaalit säilytetään turvallisesti häiriöiden vähentämiseksi.</p>
+          </div>
+          <div class="why-card" data-aos="fade-up" data-aos-delay="350">
+            <div class="why-card__num text--accent">06</div>
+            <h3 class="why-card__title">Jälkitakuu</h3>
+            <p class="why-card__desc">Työlläni on 12 kuukauden työnlaatutakuu. Jos jokin ei ole kunnossa, palaan ja korjaan sen — ilman väittelyä.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================
+         ASIAKASPALAUTE
+    ========================= -->
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <p class="section__eyebrow">Asiakasarvostelut</p>
+          <h2 class="section__title">Mitkä ihmiset <span class="text--accent">sanovat</span></h2>
+        </div>
+
+        <div class="swiper testimonials__swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-card__quote">"[Nimesi] rakensi meille laajennuksen viime kesänä ja laatu on aivan poikkeuksellista. Hän kertoi kustannuksista suoraan alusta alkaen, piti työmaan tiptopissa ja valmistui kaksi päivää etuajassa. En voisi suositella häntä tarpeeksi."</p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">SM</div>
+                  <div>
+                    <strong class="testimonial-card__name">Saara &amp; Tuomas M.</strong>
+                    <span class="testimonial-card__role">Asunnonomistajat, [Kaupunki]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-card__quote">"Meillä oli monimalkainen rakenteellinen ongelma, johon kaksi muuta rakentajaa kieltäytyi koskemasta. [Nimesi] arvioi sen ammattitaitoisesti, selitti kaiken selvästi ja korjasi sen kunnolla. Poikkeuksellista työtä ja hyvää viestintää läpi prosessin."</p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">JR</div>
+                  <div>
+                    <strong class="testimonial-card__name">Juhani R.</strong>
+                    <span class="testimonial-card__role">Kiinteistönomistaja, [Kaupunki]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-card__quote">"Toimitilamme sisustus valmistui ajallaan ja sovitussa budjetissa — harvinaista tällä alalla. [Nimesi] hallinnoi kaikkia työvaiheita saumattomasti ja lopputulos on loistava. Olemme jo varanneet hänet toiseen vaiheeseen."</p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">CD</div>
+                  <div>
+                    <strong class="testimonial-card__name">Kirsi D.</strong>
+                    <span class="testimonial-card__role">Yrityksen omistaja, [Kaupunki]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-card__quote">"Ensimmäisestä keskustelusta luovutukseen [Nimesi] oli ammattimainen, avulias ja täysin läpinäkyvä. Ullakkoremontistamme tuli upea — se on tuonut todellista lisäarvoa kotiimme ja olemme erittäin tyytyväisiä."</p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">MK</div>
+                  <div>
+                    <strong class="testimonial-card__name">Matti &amp; Liisa K.</strong>
+                    <span class="testimonial-card__role">Asunnonomistajat, [Kaupunki]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination testimonials__pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================
+         YHTEYDENOTTO-OSIO
+    ========================= -->
+    <section class="contact section section--dark" id="contact">
+      <div class="container contact__inner">
+
+        <div class="contact__info" data-aos="fade-right">
+          <p class="section__eyebrow">Ota yhteyttä</p>
+          <h2 class="section__title">Puhutaan <span class="text--accent">projektistasi</span></h2>
+          <p class="contact__desc">Olipa sinulla tarkat suunnitelmat tai pelkkä idea — keskustelen mielelläni projektistasi ja annan ilmaisen, sitouttamattoman tarjouksen.</p>
+
+          <ul class="contact__details">
+            <li class="contact__detail">
+              <span class="contact__detail-icon">&#128222;</span>
+              <div><strong>Puhelin</strong><a href="tel:+44000000000">+44 (0) 000 000 0000</a></div>
+            </li>
+            <li class="contact__detail">
+              <span class="contact__detail-icon">&#128140;</span>
+              <div><strong>Sähköposti</strong><a href="mailto:hello@SetUp.com">hello@SetUp.com</a></div>
+            </li>
+            <li class="contact__detail">
+              <span class="contact__detail-icon">&#128205;</span>
+              <div><strong>Toimialue</strong><span>[Alueesi] &amp; ympäristökunnat</span></div>
+            </li>
+            <li class="contact__detail">
+              <span class="contact__detail-icon">&#128336;</span>
+              <div><strong>Vastausaika</strong><span>24 tunnin sisällä</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact__form-wrap" data-aos="fade-left">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Koko nimi <span class="text--accent">*</span></label>
+              <input type="text" id="name" name="name" placeholder="esim. Maija Meikäläinen" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Puhelinnumero</label>
+                <input type="tel" id="phone" name="phone" placeholder="+358 40 123 4567" />
+              </div>
+              <div class="form-group">
+                <label for="email">Sähköpostiosoite <span class="text--accent">*</span></label>
+                <input type="email" id="email" name="email" placeholder="maija@esimerkki.fi" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Projektin tyyppi</label>
+              <select id="service" name="service">
+                <option value="" disabled selected>Valitse palvelu...</option>
+                <option value="new-build">Uudiskodin rakennus</option>
+                <option value="extension">Laajennus / Lisäosa</option>
+                <option value="renovation">Remontti / Uudistus</option>
+                <option value="commercial">Liiketilan sisustus</option>
+                <option value="structural">Rakenteelliset korjaukset</option>
+                <option value="other">Muu / En ole varma</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Kerro projektistasi <span class="text--accent">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Lyhyt kuvaus projektista, sijainnista ja aikataulusta jos tiedossa..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Lähetä tiedustelu &nbsp;&#8594;</button>
+            <p class="form-note">&#128274; Tietosi pidetään yksityisinä eikä niitä koskaan jaeta.</p>
+          </form>
+
+          <div class="form-success" id="formSuccess" aria-live="polite" hidden>
+            <div class="form-success__icon">&#10003;</div>
+            <h3>Viesti lähetetty!</h3>
+            <p>Kiitos yhteydenotostasi. Olen sinuun yhteydessä 24 tunnin sisällä.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================
+       FOOTERI / ALAOSIO
+  ========================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <a href="#hero" class="logo">
+        <img class="logo__icon" src="SetUp.png.png" alt="SetUp">
+        <span class="logo__text">Set<strong>Up</strong></span>
+      </a>
+        <nav class="footer__nav" aria-label="Alatunnisteen navigaatio">
+          <a href="#about">Minusta</a>
+          <a href="#services">Palvelut</a>
+          <a href="#projects">Projektit</a>
+          <a href="#why-us">Miksi minä</a>
+          <a href="#testimonials">Arvostelut</a>
+          <a href="#contact">Ota yhteyttä</a>
+        </nav>
+      </div>
+      <hr class="footer__divider" />
+      <div class="footer__bottom">
+        <div class="footer__contact-info">
+          <span>&#128222; +44 (0) 000 000 0000</span>
+          <span>&#128140; hello@SetUp.com</span>
+          <span>&#128205; [Kaupunkisi, Alueesi]</span>
+        </div>
+        <p class="footer__copy">
+          &copy; <span id="year"></span> SetUp · [Nimesi]. Kaikki oikeudet pidätetään.<br/>
+          <small>Lisensoitu &amp; vakuutettu · Rek.nro [XXXXXXXX]</small>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Skriptit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
